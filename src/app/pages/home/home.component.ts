@@ -8,37 +8,18 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-images = [
-    {
-      url: '/cabroke/home5.jpg',
-      title: 'Home Exterior Paving'
-    },
-    {
-      url: '/cabroke/home2.jpg',
-      title: 'Outdoor Living Spaces'
-    },
-    {
-      url: '/cabroke/home1.jpg',
-      title: 'Garden relaxation area'
-    },
-    {
-      url: '/cabroke/home4.jpg',
-      title: 'Pathways & Driveways'
-    },
-    {
-      url: '/cabroke/home9.jpg',
-      title: 'Design & Installation'
-    },
-    {
-      url: '/cabroke/home10.jpg',
-      title: 'industrial paving'
-    }
+ images: string[] = [
+    '/cabroke/home5.jpg',
+    '/cabroke/home2.jpg',
+    '/cabroke/home3.jpg',
+    '/cabroke/home9.jpg',
+    '/cabroke/home5.jpg',
+    '/cabroke/home10.jpg'
   ];
+   selectedImage: string | null = null;
 
-  selectedImage: { url: string; title: string } | null = null;
-
-  openLightbox(image: { url: string; title: string }) {
-    this.selectedImage = image;
+  openLightbox(imageUrl: string) {
+    this.selectedImage = imageUrl;
   }
 
   closeLightbox() {

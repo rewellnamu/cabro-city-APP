@@ -5,33 +5,14 @@
 }
 
 .hero {
-  position: relative;
-  background: url('/cabroke/Experts1.jpg') center/cover no-repeat;
+  background: url('/assets/hero-bg.jpg') center/cover no-repeat;
+  color: white;
   text-align: center;
   padding: 6rem 2rem;
-  overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: inherit;
-    z-index: 0;
-    transition: transform 0.7s cubic-bezier(0.4,0,0.2,1), filter 0.7s cubic-bezier(0.4,0,0.2,1);
-    will-change: transform, filter;
-  }
-
-  &:hover::before {
-    transform: scale(1.05);
-    filter: brightness(0.85) blur(2px);
-  }
 
   .content {
-    position: relative;
-    z-index: 1;
     max-width: 800px;
     margin: 0 auto;
-    color: yellow;
 
     h1 {
       font-size: 3rem;
@@ -62,7 +43,7 @@
         &.secondary {
           background-color: transparent;
           border: 2px solid #fff;
-          color: #0a0a0a;
+          color: #fff;
         }
 
         &:hover {
@@ -96,21 +77,6 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 250px;
       text-align: left;
-
-      img {
-        width: 100%;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 0.75rem;
-        transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      }
-
-      &:hover img {
-        transform: scale(1.06) rotate(-1deg);
-        box-shadow: 0 8px 24px rgba(31,38,135,0.13);
-      }
 
       h3 {
         margin-bottom: 0.5rem;
