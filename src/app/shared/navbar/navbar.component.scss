@@ -46,11 +46,13 @@
     a {
       text-decoration: none;
       color: #222;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       font-weight: 600;
       font-size: 1.08rem;
       padding: 0.35rem 0.5rem;
       border-radius: 3px;
       transition: color 0.25s, background 0.25s;
+      cursor: pointer;
 
       &:hover,
       &.active {

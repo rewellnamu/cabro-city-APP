@@ -9,10 +9,29 @@
   color: rgb(218, 197, 15);
   text-align: center;
   padding: 6rem 2rem;
+  position: relative;
+  overflow:hidden;
+  transition: background-size 0.5s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    transition: background 0.5s;
+    z-index: 1;
+  }
+
+  &:hover {
+    background-size: 110%;
+    &::before {
+      background: rgba(0,0,0,0.25);
+    }
+  }
 
   .content {
-    max-width: 800px;
-    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 
     h1 {
       font-size: 3rem;
@@ -34,10 +53,12 @@
         border-radius: 5px;
         text-decoration: none;
         font-weight: bold;
+        cursor: pointer;
 
         &.primary {
           background-color: #ffc107;
           color: #000;
+          
         }
 
         &.secondary {
