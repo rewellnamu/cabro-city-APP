@@ -1,0 +1,32 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/">Cabro<span>City</span></a>
+    </div>
+
+    <div class="nav-links desktop-only">
+      <a routerLink="/" routerLinkActive="active" (click)="closeMobileMenu()">Home</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMobileMenu()">About</a>
+      <a routerLink="/services" routerLinkActive="active" (click)="closeMobileMenu()">Services</a>
+      <a routerLink="/gallery" routerLinkActive="active" (click)="closeMobileMenu()">Gallery</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">Contact</a>
+      <a class="cta" routerLink="/quote" (click)="closeMobileMenu()">Get a Quote</a>
+    </div>
+
+    <button class="hamburger mobile-only" (click)="toggleMobileMenu()">
+      <span [class.open]="isMobileMenuOpen"></span>
+      <span [class.open]="isMobileMenuOpen"></span>
+      <span [class.open]="isMobileMenuOpen"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" *ngIf="isMobileMenuOpen">
+    <a routerLink="/" routerLinkActive="active" (click)="closeMobileMenu()">Home</a>
+    <a routerLink="/about" routerLinkActive="active" (click)="closeMobileMenu()">About</a>
+    <a routerLink="/services" routerLinkActive="active" (click)="closeMobileMenu()">Services</a>
+    <a routerLink="/gallery" routerLinkActive="active" (click)="closeMobileMenu()">Gallery</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">Contact</a>
+    <a class="cta" routerLink="/quote" (click)="closeMobileMenu()">Get a Quote</a>
+  </div>
+</nav>
